@@ -1,0 +1,94 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Coronaviral;
+    src: url(../jcartas/Coronaviral.otf);
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+.title {
+    text-align: center;
+    font-size: 95px;
+    font-family: Coronaviral;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    height: 100vh;
+    background-color: rgb(98, 207, 125);
+}
+
+.table {
+    width: 1250px;
+    height: 740px;
+    padding: 40px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 20px;
+    perspective: 1000px;
+    background-color: rgba(13, 168, 60, 0.548);
+}
+
+.card {
+    width: 21%;
+    height: 35%;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.front {
+    transform: rotateY(180deg);
+    background-color: rgb(114, 202, 151);
+}
+
+.back {
+    background-color: rgb(79, 161, 113);
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+}
