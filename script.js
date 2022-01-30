@@ -12,47 +12,26 @@ var back;
 function flip() {   
     this.classList.toggle('flip');
 
-    /*
-     mostrarCarta();
-     ocultarCarta();
-    //Funcion mostrar carta
-function mostrarCarta() {
-    if (!cartaGirada()){
+ 
+//Cambia los valores booleanos de cartaGirada para poder identificar con cada click cuando esta girada o tapada    
+    if (!cartaGirada){
         cartaGirada = true;
         front = this;
-        console.log({front,back});
+        ocultarCarta();
+    } else {
+        
+        cartaGirada = false;
+        back = this;
+        
+         }
 
-        } else {
-             ocultarCarta();
-        }     
-}
+    }  
+        cards.forEach(card => card.addEventListener('click', flip));
 
-//Funcion ocultar carta
-function ocultarCarta() {
-     if (cartaGirada = true()){
-         cartaGirada = false;
-             back = this;
-             console.log({front,back});
-            
-     } else {
-         mostrarCarta();
-
-     }
-   }*/
-
-
-if (!cartaGirada){
-    cartaGirada = true;
-    front = this;
-    console.log({front,back});
-
-} else {
-    cartaGirada = false;
-    back = this;
-    console.log({front,back});
-
-    }
-}
-
-
-cards.forEach(card => card.addEventListener('click', flipCard));
+ //Funcion ocultar carta que elimina el flip despues de 2000 milisegundos
+    function ocultarCarta() {
+        setTimeout(() => {
+            front.classList.remove('flip');
+            back.classList.remove('flip');
+        }, 2000);
+ }
