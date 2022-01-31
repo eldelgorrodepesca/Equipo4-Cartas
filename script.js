@@ -17,7 +17,6 @@ function flip() {
     if (!cartaGirada){
         cartaGirada = true;
         front = this;
-        ocultarCarta();
     } else {
         
         cartaGirada = false;
@@ -33,5 +32,12 @@ function flip() {
         setTimeout(() => {
             front.classList.remove('flip');
             back.classList.remove('flip');
-        }, 2000);
- }
+        }, 1000);
+}
+ 
+
+/*Reiniciar */
+function reiniciarJuego() {
+    ocultarCarta();
+    Cronometro() = 0;  
+}
