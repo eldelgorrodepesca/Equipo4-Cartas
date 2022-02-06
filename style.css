@@ -4,15 +4,24 @@
     box-sizing: border-box;
 }
 
+
+/* carga una nueva fuente */
+
 @font-face {
     font-family: Coronaviral;
     src: url(Coronaviral.otf);
 }
 
+
+/* icono del juego */
+
 .icon {
     width: 100px;
     height: 100px;
 }
+
+
+/* tiutlo principal */
 
 .title {
     text-align: center;
@@ -21,14 +30,20 @@
     text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
+
+/* cuerpo de la pagina */
+
 body {
     height: 100vh;
     background-color: rgb(98, 207, 125);
 }
 
+
+/* tablero */
+
 .table {
-    width: 1250px;
-    height: 740px;
+    width: 950px;
+    height: 560px;
     padding: 40px;
     margin: auto;
     display: flex;
@@ -41,6 +56,9 @@ body {
     background-color: rgba(13, 168, 60, 0.548);
 }
 
+
+/* carta */
+
 .card {
     width: 21%;
     height: 35%;
@@ -51,18 +69,30 @@ body {
     transition: transform .5s;
 }
 
+
+/* transformacion al pasar el raton sobre la carta */
+
 .card:hover {
     transform: scale(1.05);
 }
+
+
+/* transformacion al abrir la carta */
 
 .card:active {
     transform: scale(.97);
     transition: transform .2s;
 }
 
+
+/* efecto de rotacion en el flip */
+
 .card.flip {
     transform: rotateY(180deg);
 }
+
+
+/* imagen de las cartas */
 
 .imagen {
     width: 100%;
@@ -71,14 +101,23 @@ body {
     position: relative;
 }
 
+
+/* parte frontal de la carta */
+
 .front {
     transform: rotateY(180deg);
     background-color: rgb(114, 202, 151);
 }
 
+
+/* parte trasera de la carta */
+
 .back {
     background-color: rgb(79, 161, 113);
 }
+
+
+/* ambas partes de la carta */
 
 .front,
 .back {
@@ -94,7 +133,7 @@ body {
 }
 
 
-/*Boton de comienzo del juego*/
+/* Boton de comienzo del juego */
 
 .start-btn {
     background-color: violet;
@@ -110,9 +149,15 @@ body {
     box-shadow: 5px 5px 16px rgb(0, 0, 0);
 }
 
+
+/* transformacion al pasar el raton sobre el boton de incio */
+
 .start-btn:hover {
     transform: scale(.97);
 }
+
+
+/* contenedor de la carta */
 
 .container {
     position: center;
@@ -123,4 +168,46 @@ body {
 }
 
 
-/*Final boton*/
+/* Temporizador */
+
+.chronometer {
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+}
+
+
+/* contenedor dentro del cronometro */
+
+.chronometer .block {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* div del contenedor del cronometro*/
+
+.chronometer .block div {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(11, 128, 46, 0.548);
+    box-shadow: 0px 0px 6px 2px lightgreen;
+    color: rgb(57, 100, 39);
+    font-size: 30px;
+    font-weight: bold;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* parrafo del contenedor del cronometro*/
+
+.chronometer .block p {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
