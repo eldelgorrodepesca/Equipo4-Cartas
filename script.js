@@ -5,6 +5,7 @@ var cartaGirada = false; // indica el estado de la carta
 var front, back; // partes de la carta
 var minutes = 2;
 var seconds = 0;
+var puntos = 0;
 
 /*================================= FLIP =================================*/
 
@@ -27,6 +28,8 @@ function flipCard() {
 function comprobar() {
   if (front.dataset.framework === back.dataset.framework) {
     bloquearFlip();
+    puntos++;
+    console.log({puntos});
   } else {
     ocultarCarta();
   }
