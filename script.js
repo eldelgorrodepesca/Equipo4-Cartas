@@ -36,11 +36,8 @@ function ocultarCarta() {
 }
 
 
-/*Reiniciar */
-function reiniciarJuego() {
 
-}
-
+/*mezcla las cartas ,cada posicion de ellas obtine un numero del 1-8 y se mezclan*/
 function mezclar() {
     cards.forEach(card => {
         let posAleatoria = Math.floor(Math.random() * 8);
@@ -48,3 +45,12 @@ function mezclar() {
     })
 
 }
+
+function juegoFinalizado() {
+    if (puntos = 4) {
+        alert("Ha ganado enhorabuena");
+    }
+}
+
+/*La funcion para reiniciar el juego se usa en location.reload() ,luego en el body de board.html esta onload=" mezclar()" para que las mezcle
+despues de refrescar la pagina*/
