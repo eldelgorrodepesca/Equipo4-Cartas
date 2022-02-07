@@ -16,20 +16,26 @@ function flipCard() {
   if (!cartaGirada) {
     cartaGirada = true;
     front = this;
-    return;
-  }
+  } else {
   cartaGirada = false;
   back = this;
   comprobar();
+  }
+
 }
 
 /*============================== Comprobar Cartas ==============================*/
 //Función que comprueba si las cartas son iguales y llama a bloquear flip en el caso de que sean igual y a ocultar carta en el caso de que sean distintas
 function comprobar() {
-  if (front.dataset.framework === back.dataset.framework) {
+
+    //var prueba = front.dataset.framework === back.dataset.framework;
+
+  if (front.dataset.img === back.dataset.img) {
     bloquearFlip();
     puntos++;
     console.log({puntos});
+    console.log(front.dataset.img);
+    juegoFinalizado();
   } else {
     ocultarCarta();
   }
@@ -66,7 +72,7 @@ function mezclar() {
 
 function juegoFinalizado() {
   // caso en que llegue a conseguir el maximo de puntos
-  if ((puntos = 4)) {
+  if (puntos == 4) {
     alert("Ha ganado enhorabuena");
   }
 }
