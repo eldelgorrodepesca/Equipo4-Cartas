@@ -66,7 +66,7 @@ body {
     position: relative;
     transform: scale(1);
     transform-style: preserve-3d;
-    transition: transform .5s;
+    transition: transform 0.5s;
 }
 
 
@@ -80,8 +80,8 @@ body {
 /* transformacion al abrir la carta */
 
 .card:active {
-    transform: scale(.97);
-    transition: transform .2s;
+    transform: scale(0.97);
+    transition: transform 0.2s;
 }
 
 
@@ -137,13 +137,13 @@ body {
 
 .start-btn {
     background-color: violet;
-    border: 3px solid grey;
-    color: grey;
+    border: 3px solid rgb(26, 23, 23);
+    color: rgb(26, 23, 23);
     border-radius: 10px;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     font-size: 30px;
     font-family: Coronaviral;
     box-shadow: 5px 5px 16px rgb(0, 0, 0);
@@ -153,7 +153,30 @@ body {
 /* transformacion al pasar el raton sobre el boton de incio */
 
 .start-btn:hover {
-    transform: scale(.97);
+    transform: scale(0.97);
+}
+
+
+/* boton reinicio  */
+
+.restart-btn {
+    background-color: violet;
+    border: 3px solid rgb(26, 23, 23);
+    color: rgb(26, 23, 23);
+    border-radius: 10px;
+    padding: 5px 32px;
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    font-family: Coronaviral;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+}
+
+
+/* transformacion al pasar el raton sobre el boton de reincio */
+
+.restart-btn:hover {
+    transform: scale(0.97);
 }
 
 
@@ -164,16 +187,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 250px;
+    padding-top: 10px;
 }
 
 
-/* Temporizador */
+/* Cronometro */
 
 .chronometer {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 5px;
 }
 
 
@@ -195,8 +218,9 @@ body {
     background-color: rgba(11, 128, 46, 0.548);
     box-shadow: 0px 0px 6px 2px lightgreen;
     color: rgb(57, 100, 39);
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bold;
+    width: 60px;
     height: 60px;
     margin-bottom: 10px;
     border: 2px solid black;
@@ -207,6 +231,52 @@ body {
 /* parrafo del contenedor del cronometro*/
 
 .chronometer .block p {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Marcador */
+
+.marcador {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+/* contenedor dentro del marcador */
+
+.marcador .block {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* div del contenedor del marcador*/
+
+.marcador .block div {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(11, 128, 46, 0.548);
+    box-shadow: 0px 0px 6px 2px lightgreen;
+    color: rgb(57, 100, 39);
+    font-size: 45px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* parrafo del contenedor del marcador*/
+
+.marcador .block p {
     font-size: 15px;
     font-weight: bold;
     color: black;
