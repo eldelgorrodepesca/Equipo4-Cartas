@@ -30,24 +30,24 @@ cards.forEach((card) => card.addEventListener("click", flipCard)); // genera el 
 
 //Función que comprueba si las cartas son iguales y llama a bloquear flip en el caso de que sean igual y a ocultar carta en el caso de que sean distintas
 function comprobar() {
-    if (front.dataset.img === back.dataset.img) {
+    document.getElementById("intentos").innerHTML = intentos; // imprime los intentos en pantalla
+    if (front.dataset.img == back.dataset.img) {
         bloquearFlip();
-        puntos++;
-        intentos++;
         juegoFinalizado();
     } else {
         intentos++;
         ocultarCarta();
     }
-
-    document.getElementById("intentos").innerHTML = puntos; // imprime los intentos en pantalla
     document.getElementById("puntos").innerHTML = puntos; // imprime los puntos en pantalla
+
 }
 
 /*============================== BLOQUEAR CARTAS ==============================*/
 
 //Función que elimina la posiblidad de hacer click en la carta
 function bloquearFlip() {
+    intentos++;
+    puntos++;
     front.removeEventListener("click", flipCard);
     back.removeEventListener("click", flipCard);
 }
@@ -57,6 +57,7 @@ function bloquearFlip() {
 //Funcion ocultar carta que elimina el flip despues de 1500 milisegundos
 function ocultarCarta() {
     setTimeout(() => {
+        intentos++;
         front.classList.remove("flip");
         back.classList.remove("flip");
     }, 1500);
@@ -77,8 +78,10 @@ function mezclar() {
 function juegoFinalizado() {
     // caso en que llegue a conseguir el maximo de puntos
     if (puntos == 4) {
-        alert("Ha ganado enhorabuena");
-        window.location = "index.html"; // redirige al inicio
+        setTimeout(() => {
+            alert("Ha ganado enhorabuena");
+            window.location = "index.html"; // redirige al inicio
+        }, 1500);
     }
 }
 
