@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* carga una nueva fuente */
+
+@font-face {
+    font-family: Coronaviral;
+    src: url(Coronaviral.otf);
+}
+
+
+/* icono del juego */
+
+.icon {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* tiutlo principal */
+
+.title {
+    text-align: center;
+    font-size: 95px;
+    font-family: Coronaviral;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* cuerpo de la pagina */
+
+body {
+    height: 100vh;
+    background-color: rgb(98, 207, 125);
+}
+
+
+/* tablero */
+
+.table {
+    float: left;
+    width: 50%;
+    height: 65%;
+    padding: 2%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 20px;
+    perspective: 1000px;
+    background-color: rgba(13, 168, 60, 0.548);
+}
+
+
+/* carta */
+
+.card {
+    width: 17%;
+    height: 23%;
+    margin: 5px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+/* transformacion al pasar el raton sobre la carta */
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
+/* transformacion al abrir la carta */
+
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+}
+
+
+/* efecto de rotacion en el flip */
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+
+/* imagen de las cartas */
+
+.imagen {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.imagenBack {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: relative; 
+}
+
+
+/* parte frontal de la carta */
+
+.front {
+    transform: rotateY(180deg);
+    background-color: rgb(114, 202, 151);
+}
+
+
+/* parte trasera de la carta */
+
+.back {
+    background-color: rgb(79, 161, 113);
+}
+
+
+/* ambas partes de la carta */
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    cursor: pointer;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+}
+
+
+/* Boton de comienzo del juego */
+
+.start-btn {
+    background-color: violet;
+    border: 3px solid rgb(26, 23, 23);
+    color: rgb(26, 23, 23);
+    border-radius: 10px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 30px;
+    font-family: Coronaviral;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+}
+
+
+/* transformacion al pasar el raton sobre el boton de incio */
+
+.start-btn:hover {
+    transform: scale(0.97);
+}
+
+
+/* boton reinicio  */
+
+.restart-btn {
+    background-color: violet;
+    border: 3px solid rgb(26, 23, 23);
+    color: rgb(26, 23, 23);
+    border-radius: 10px;
+    padding: 5px 32px;
+    text-align: center;
+    display: flex;
+    font-size: 30px;
+    font-family: Coronaviral;
+    box-shadow: 5px 5px 16px rgb(0, 0, 0);
+}
+
+
+/* transformacion al pasar el raton sobre el boton de reincio */
+
+.restart-btn:hover {
+    transform: scale(0.97);
+}
+
+
+/* contenedor de la carta */
+
+.container {
+    position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+/* Cronometro */
+
+.chronometer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+/* contenedor dentro del cronometro */
+
+.chronometer .block {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* div del contenedor del cronometro*/
+
+.chronometer .block div {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(11, 128, 46, 0.548);
+    box-shadow: 0px 0px 6px 2px lightgreen;
+    color: rgb(57, 100, 39);
+    font-size: 45px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* parrafo del contenedor del cronometro*/
+
+.chronometer .block p {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+
+/* Marcador */
+
+.marcador {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
+/* contenedor dentro del marcador */
+
+.marcador .block {
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* div del contenedor del marcador*/
+
+.marcador .block div {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(11, 128, 46, 0.548);
+    box-shadow: 0px 0px 6px 2px lightgreen;
+    color: rgb(57, 100, 39);
+    font-size: 45px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* parrafo del contenedor del marcador*/
+
+.marcador .block p {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}

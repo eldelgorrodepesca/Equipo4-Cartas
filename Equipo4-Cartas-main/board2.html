@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload=" mezclar()">
+    <p>
+        <h1 class="title">VIRUS MEMORY GAME</h1>
+    </p>
+    <br>
+
+    <div class="table">
+        <!-- PAREJA 1 -->
+        <div class="card" data-img="vendas">
+            <div class="front">
+                <img src="img/1.png" id="1" alt="1" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="vendas">
+            <div class="front">
+                <img src="img/1.png" id="1" alt="1" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <!-- PAREJA 2 -->
+        <div class="card" data-img="hospital">
+            <div class="front">
+                <img src="img/2.png" id="2" alt="2" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="hospital">
+            <div class="front">
+                <img src="img/2.png" id="2" alt="2" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <!-- PAREJA 3 -->
+        <div class="card" data-img="gel">
+            <div class="front">
+                <img src="img/3.png" alt="3" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="gel">
+            <div class="front">
+                <img src="img/3.png" alt="3" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <!-- PAREJA 4 -->
+        <div class="card" data-img="vacuna">
+            <div class="front">
+                <img src="img/4.png" alt="4" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="vacuna">
+            <div class="front">
+                <img src="img/4.png" alt="4" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <!-- PAREJA 5 -->
+        <div class="card" data-img="distancia">
+            <div class="front">
+                <img src="img/5.png" alt="5" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="distancia">
+            <div class="front">
+                <img src="img/5.png" alt="5" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <!-- PAREJA 6 -->
+        <div class="card" data-img="mascarilla">
+            <div class="front">
+                <img src="img/6.png" alt="6" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        <div class="card" data-img="mascarilla">
+            <div class="front">
+                <img src="img/6.png" alt="6" class="imagen">
+            </div>
+            <div class="back">
+                <img src="img/back.png" alt="reves" class="imagen">
+            </div>
+        </div>
+        </div>
+        <!-- CRONOMETRO -->
+        <div class="chronometer">
+            <div class="block">
+                <div class="minutes" id="minutes">--</div>
+                <p>Minutos</p>
+            </div>
+            <div class="block">
+                <div class="seconds" id="seconds">--</div>
+                <p>Segundos</p>
+            </div>
+        </div>
+        <!-- MARCADOR -->
+        <div class="marcador">
+            <div class="block">
+                <div class="puntos" id="puntos">0</div>
+                <p>Puntos</p>
+            </div>
+            <div class="block">
+                <div class="intentos" id="intentos">0</div>
+                <p>Intentos</p>
+            </div>
+        </div>
+        <!-- REINICIO -->
+        <div class="container">
+            <input type="button" value="Reiniciar" class="restart-btn" onclick="location.reload()">
+        </div>
+        </aside>
+
+        <script src="script.js"></script>
+</body>
+
+</html>
