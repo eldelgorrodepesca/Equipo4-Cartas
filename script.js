@@ -35,7 +35,7 @@ function comprobar() {
         bloquearFlip();
         juegoFinalizado();
     } else {
-        intentos++;
+
         ocultarCarta();
     }
     document.getElementById("puntos").innerHTML = puntos; // imprime los puntos en pantalla
